@@ -3,11 +3,10 @@ import {
   Routes,
   Route,
 } from "react-router-dom";
-
-
 import View from "./View";
-
 import Home from "./Home";
+import Parent from "./Parent";
+import Child from "./Child";
 
 
 
@@ -18,7 +17,8 @@ export default function ReactRouter() {
         <Route path="/" element={<Home />}> </Route>
         <Route path="/view" element={<View />}> </Route>
         <Route path="/:id" element={<Home />}> </Route>
-
+        <Route path="/parent" element={<Parent />}> </Route>
+        <Route path="/child" element={<Child />}> </Route>
       </Routes>
     </BrowserRouter>
   )
