@@ -34,8 +34,6 @@ export default function View() {
                           <button onClick={()=>deleteid(items.id)}>delete</button>
                          <button onClick={()=>editid(items.id)}>Edit</button> 
                         </div>
-
-
                         )
                     })
                 }

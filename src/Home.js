@@ -28,15 +28,15 @@ export default function Home() {
 
     useEffect(() => {
         let url = window.location.href;
-        let ids = url.substring(url.lastIndexOf('/') + 1);
-        console.log(ids)
-        setIds(ids)
+        let getid = url.substring(url.lastIndexOf('/') + 1);
+        // console.log(ids)/
+        setIds(getid)
 
         let olddata = localStorage.getItem("save") ? JSON.parse(localStorage.getItem('save')) : []
         let currentdata = '';
 
         for (let i = 0; i < olddata.length; i++) {
-            if (olddata[i].id == ids) {
+            if (olddata[i].id == getid) {
                 currentdata = olddata[i];
                 if (olddata[i].gender)
                     console.log(currentdata)
@@ -58,20 +58,22 @@ export default function Home() {
     }
     const savedataa = { name: name, id: id, email: email }
 
-    let getvalue = (e) => {
+    let getvalue = (e) => {   
+        let olddata = localStorage.getItem("save") ? JSON.parse(localStorage.getItem('save')) : []
 
-        if (setXyz == "") {
-            array.push(savedataa)
-            setSaveata(array)
-            localStorage.setItem('save', JSON.stringify(array))
-        } else {
-            let objIndex = array.findIndex((obj => obj.id == setID));
-            array[objIndex].name = setName
-            array[objIndex].email = setEmail
-            localStorage.setItem('save', JSON.stringify(array))
-            // window.location.href = '/table' 
-        }
 
+
+        // if (xyz == "") {
+        //     array.push(savedataa)
+        //     setSaveata(array)
+        //     localStorage.setItem('save', JSON.stringify(array))
+        // } else{
+        //     const index = olddata.findIndex((obj=> obj.id == getid))
+        //     array[index].name = name
+        //     array[index].email = email
+        //     localStorage.setItem('save',JSON.stringify(array))
+        //     console.log('match');
+        // }
     }
 
     return (
