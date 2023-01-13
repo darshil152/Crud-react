@@ -6,9 +6,9 @@ import ContextDemoFC from './ContextDemoFC';
 function App() {
   return (
     <div>
-      <ContextDemoFC>
+      {/* <ContextDemoFC> */}
         <Reactroute />
-      </ContextDemoFC>
+      {/* </ContextDemoFC> */}
     </div>
   );
 }

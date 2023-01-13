@@ -10,6 +10,7 @@ import Child from "./Child";
 import Api from "./Api";
 import ContextDemoFC from "./ContextDemoFC";
 import Button from "./Mainpage";
+import Todo from "./Todo";
 
 
 
@@ -25,7 +26,8 @@ export default function ReactRouter() {
         <Route path="/api" element={<Api />}> </Route>
         <Route path="/context" element={<ContextDemoFC />}> </Route>
         <Route path="/button" element={<Button />}> </Route>
-        {/* <Route path="/cartreducer" element={<CartReducer />}> </Route> */}
+
+        <Route path="/todo" element={<Todo />}> </Route>
       </Routes>
     </BrowserRouter>
   )
